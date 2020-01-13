@@ -124,6 +124,9 @@ public class LevelController : MonoBehaviour
     public void RestartGame()
     {
         score = 0;
+        theObstacleGen.generateTime = 2.0f;
+        theObstacleGen.obstacleSpeed = 0.15f;
+        currentObstacle = ObstacleState.Cactus;
         UpdateScoreText(scoreText, false);
         DeltetAllObstacle();
         currentState = GameState.MainMenu;
