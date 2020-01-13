@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        Stand();
         myRigidbody.velocity = new Vector3(0, jumpForce, 0);
         canJump = false;
     }

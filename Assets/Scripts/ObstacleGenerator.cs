@@ -12,7 +12,8 @@ public class ObstacleGenerator : MonoBehaviour
     private const float START_BIRD_X = 8.0f;
     private const float START_BIRD_Y = -1.0f;
 
-    [SerializeField] private float generateTime = 2.0f;
+    public float generateTime = 2.0f;
+    public float obstacleSpeed = 0.15f;
     private float generateCounter;
     private LevelController theLevel;
 
@@ -54,6 +55,7 @@ public class ObstacleGenerator : MonoBehaviour
             {
                 theObstacleObject = Instantiate(CactusPrefab, new Vector3(START_CACTUS_X, START_CACTUS_Y, transform.position.z), Quaternion.identity);
             }
+            theObstacleObject.GetComponent<ObstacleController>().speed = obstacleSpeed;
         }
         theLevel.allObstacle.Add(theObstacleObject.GetComponent<ObstacleController>());
 

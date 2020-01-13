@@ -861,7 +861,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   currentObstacle: 0
+  score: 0
   allObstacle: []
+  theObstacleGen: {fileID: 1894727953}
   scoreText: {fileID: 32178554}
   restartButton: {fileID: 1463604740}
   gameOverText: {fileID: 784584858}
@@ -1071,6 +1073,7 @@ MonoBehaviour:
   BirdPrefab: {fileID: 1085791943658174853, guid: 3ee90734b8917ef4a983144df26f1905,
     type: 3}
   generateTime: 2
+  obstacleSpeed: 0.2
 --- !u!4 &1894727954
 Transform:
   m_ObjectHideFlags: 0

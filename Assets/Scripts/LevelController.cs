@@ -18,7 +18,7 @@ public class LevelController : MonoBehaviour
 
     public GameState currentState = GameState.MainMenu;
     public ObstacleState currentObstacle = ObstacleState.Cactus;
-    private int score;
+    public int score;
     private int hightScore;
     private float scoreCounter;
     private float scoreTime = 0.01f;
@@ -26,6 +26,7 @@ public class LevelController : MonoBehaviour
     public List<ObstacleController> allObstacle;
 
     [Header("Component")]
+    [SerializeField] private ObstacleGenerator theObstacleGen;
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject restartButton;
     [SerializeField] private GameObject gameOverText;
@@ -35,7 +36,7 @@ public class LevelController : MonoBehaviour
     void Start()
     {
         allObstacle = new List<ObstacleController>();
-        score = 400;
+        score = 0;
     }
 
     void Update()
@@ -60,6 +61,16 @@ public class LevelController : MonoBehaviour
                 IncreasScore();
                 if (score == 500)
                     currentObstacle = ObstacleState.Bird;
+                else if (score == 1000)
+                {
+                    theObstacleGen.generateTime = 1.5f;
+                    theObstacleGen.obstacleSpeed = 0.3f;
+                }
+                else if (score == 1500)
+                {
+                    theObstacleGen.generateTime = 1f;
+                    theObstacleGen.obstacleSpeed = 0.4f;
+                }
             }
         }
         else if (currentState == GameState.GameOver)
