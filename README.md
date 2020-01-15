@@ -3,6 +3,8 @@ This is a challenge in creating games to improve my skills.
 
  ## Day6 : T-RexRun
  
+  ![GitHub Logo](/images/image1.png)
+ 
 **Let's play : https://book1317.github.io/unity-trexrun/**
 
 ## Other Projects
