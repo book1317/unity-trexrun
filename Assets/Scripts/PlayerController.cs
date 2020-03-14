@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
                 Crouch();
             }
             if (Input.GetButtonUp("Down") && canJump)
+
             {
                 Stand();
             }
@@ -64,17 +65,17 @@ public class PlayerController : MonoBehaviour
         GetComponents<BoxCollider2D>()[0].enabled = true;
     }
 
+    void Death()
+    {
+        theLevel.OnDeath();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Obstacle"))
         {
             Death();
         }
-    }
-
-    void Death()
-    {
-        theLevel.OnDeath();
     }
 
     void OnCollisionEnter2D(Collision2D other)

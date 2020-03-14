@@ -6,7 +6,7 @@ public class ObstacleGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject CactusPrefab;
     private const float START_CACTUS_X = 8.0f;
-    private const float START_CACTUS_Y = -1.37f;
+    private const float START_CACTUS_Y = -1.64f;
 
     [SerializeField] private GameObject BirdPrefab;
     private const float START_BIRD_X = 8.0f;
